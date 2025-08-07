@@ -535,7 +535,6 @@ class TensorDictModuleBase(nn.Module):
             delattr(cls, "out_keys")
             out_keys = unravel_key_list(out_keys)
             cls._out_keys = out_keys
-            cls._out_keys_apparent = out_keys
             cls.out_keys = TensorDictModuleBase.out_keys
         out = super().__new__(cls)
         return out
@@ -555,7 +554,7 @@ class TensorDictModuleBase(nn.Module):
 
     @property
     def out_keys(self):
-        return self._out_keys_apparent
+        return self._out_keys
 
     @property
     def out_keys_source(self):
@@ -563,11 +562,7 @@ class TensorDictModuleBase(nn.Module):
 
     @out_keys.setter
     def out_keys(self, value: List[Union[str, Tuple[str]]]):
-        # the first time out_keys are set, they are marked as ground truth
-        value = unravel_key_list(list(value))
-        if not hasattr(self, "_out_keys"):
-            self._out_keys = value
-        self._out_keys_apparent = value
+        self._out_keys = unravel_key_list(list(value))
 
     def select_out_keys(self, *out_keys) -> TensorDictModuleBase:  # noqa: F811
         """Selects the keys that will be found in the output tensordict.
