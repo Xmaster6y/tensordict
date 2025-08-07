@@ -1041,6 +1041,37 @@ class TestTDModule:
         assert td_out.batch_size == ()
         assert td_out.device is None
 
+    def test_in_keys_change(self):
+        net = nn.Linear(3, 4)
+        td_module = TensorDictModule(module=net, in_keys=["in"], out_keys=["out"])
+
+        def hook(module, args):
+            return args[0] - args[1]
+
+        net.register_forward_pre_hook(hook)
+        td_module.in_keys = ["in1", "in2"]
+
+        td = TensorDict({"in1": torch.randn(3, 3), "in2": torch.randn(3, 3)}, [3])
+        td_module(td)
+        assert td.shape == torch.Size([3])
+        assert td.get("out").shape == torch.Size([3, 4])
+
+    def test_out_keys_change(self):
+        net = nn.Linear(3, 4)
+        td_module = TensorDictModule(module=net, in_keys=["in"], out_keys=["out"])
+
+        def hook(module, args, output):
+            return output, output.mean(dim=1)
+
+        net.register_forward_hook(hook)
+        td_module.out_keys = ["out1", "out2"]
+
+        td = TensorDict({"in": torch.randn(3, 3)}, [3])
+        td_module(td)
+        assert td.shape == torch.Size([3])
+        assert td.get("out1").shape == torch.Size([3, 4])
+        assert td.get("out2").shape == torch.Size([3])
+
 
 class TestTDSequence:
     @pytest.mark.parametrize("inplace", [True, False, None])
