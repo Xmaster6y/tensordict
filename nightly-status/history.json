@@ -1,17 +1,17 @@
 {
-  "last_updated": "2026-03-17T18:17:02.736227+00:00",
+  "last_updated": "2026-03-18T06:20:20.964016+00:00",
   "stats": {
     "last_7_days": {
       "days": 7,
       "runs_with_data": 7,
-      "total_workflow_runs": 42,
-      "total_success": 42,
+      "total_workflow_runs": 36,
+      "total_success": 36,
       "total_failure": 0,
       "success_rate": 100.0
     },
     "last_30_days": {
-      "days": 24,
-      "runs_with_data": 18,
+      "days": 25,
+      "runs_with_data": 19,
       "total_workflow_runs": 108,
       "total_success": 108,
       "total_failure": 0,
@@ -19,6 +19,59 @@
     }
   },
   "history": [
+    {
+      "date": "2026-03-18",
+      "orchestrator_ran": true,
+      "orchestrator_status": "in_progress",
+      "orchestrator_url": "https://github.com/Xmaster6y/tensordict/actions/runs/23231892149",
+      "orchestrator_run_id": 23231892149,
+      "workflows": {
+        "test-linux.yml": {
+          "status": "skipped",
+          "conclusion": null,
+          "url": null,
+          "display_name": "Linux Tests"
+        },
+        "test-macos.yml": {
+          "status": "skipped",
+          "conclusion": null,
+          "url": null,
+          "display_name": "MacOS Tests"
+        },
+        "test-rl-gpu.yml": {
+          "status": "skipped",
+          "conclusion": null,
+          "url": null,
+          "display_name": "RL GPU Tests"
+        },
+        "lint.yml": {
+          "status": "skipped",
+          "conclusion": null,
+          "url": null,
+          "display_name": "Lint"
+        },
+        "docs.yml": {
+          "status": "skipped",
+          "conclusion": null,
+          "url": null,
+          "display_name": "Documentation"
+        },
+        "benchmarks.yml": {
+          "status": "skipped",
+          "conclusion": null,
+          "url": null,
+          "display_name": "Benchmarks"
+        }
+      },
+      "summary": {
+        "total": 6,
+        "success": 0,
+        "failure": 0,
+        "skipped": 6,
+        "other": 0,
+        "success_rate": null
+      }
+    },
     {
       "date": "2026-03-17",
       "orchestrator_ran": true,
