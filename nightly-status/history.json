@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-22T19:04:03.729214+00:00",
+  "last_updated": "2026-06-23T07:09:44.626576+00:00",
   "stats": {
     "last_7_days": {
       "days": 7,
@@ -19,6 +19,59 @@
     }
   },
   "history": [
+    {
+      "date": "2026-06-23",
+      "orchestrator_ran": true,
+      "orchestrator_status": "pending",
+      "orchestrator_url": "https://github.com/Xmaster6y/tensordict/actions/runs/28008808249",
+      "orchestrator_run_id": 28008808249,
+      "workflows": {
+        "test-linux.yml": {
+          "status": "success",
+          "conclusion": "success",
+          "url": "https://github.com/Xmaster6y/tensordict/actions/runs/28008808249/job/82896879265",
+          "display_name": "Linux Tests"
+        },
+        "test-macos.yml": {
+          "status": "success",
+          "conclusion": "success",
+          "url": "https://github.com/Xmaster6y/tensordict/actions/runs/28008808249/job/82896878257",
+          "display_name": "MacOS Tests"
+        },
+        "test-rl-gpu.yml": {
+          "status": "success",
+          "conclusion": "success",
+          "url": "https://github.com/Xmaster6y/tensordict/actions/runs/28008808249/job/82896878177",
+          "display_name": "RL GPU Tests"
+        },
+        "lint.yml": {
+          "status": "success",
+          "conclusion": "success",
+          "url": "https://github.com/Xmaster6y/tensordict/actions/runs/28008808249/job/82896878255",
+          "display_name": "Lint"
+        },
+        "docs.yml": {
+          "status": "success",
+          "conclusion": "success",
+          "url": "https://github.com/Xmaster6y/tensordict/actions/runs/28008808249/job/82896878235",
+          "display_name": "Documentation"
+        },
+        "benchmarks.yml": {
+          "status": "success",
+          "conclusion": "success",
+          "url": "https://github.com/Xmaster6y/tensordict/actions/runs/28008808249/job/82896878133",
+          "display_name": "Benchmarks"
+        }
+      },
+      "summary": {
+        "total": 6,
+        "success": 6,
+        "failure": 0,
+        "skipped": 0,
+        "other": 0,
+        "success_rate": 100.0
+      }
+    },
     {
       "date": "2026-06-22",
       "orchestrator_ran": true,
@@ -4685,59 +4738,6 @@
           "status": "success",
           "conclusion": "success",
           "url": "https://github.com/Xmaster6y/tensordict/actions/runs/23580566293/job/68662343837",
-          "display_name": "Benchmarks"
-        }
-      },
-      "summary": {
-        "total": 6,
-        "success": 6,
-        "failure": 0,
-        "skipped": 0,
-        "other": 0,
-        "success_rate": 100.0
-      }
-    },
-    {
-      "date": "2026-03-25",
-      "orchestrator_ran": true,
-      "orchestrator_status": "queued",
-      "orchestrator_url": "https://github.com/Xmaster6y/tensordict/actions/runs/23527812619",
-      "orchestrator_run_id": 23527812619,
-      "workflows": {
-        "test-linux.yml": {
-          "status": "success",
-          "conclusion": "success",
-          "url": "https://github.com/Xmaster6y/tensordict/actions/runs/23527812619/job/68484871546",
-          "display_name": "Linux Tests"
-        },
-        "test-macos.yml": {
-          "status": "success",
-          "conclusion": "success",
-          "url": "https://github.com/Xmaster6y/tensordict/actions/runs/23527812619/job/68484871001",
-          "display_name": "MacOS Tests"
-        },
-        "test-rl-gpu.yml": {
-          "status": "success",
-          "conclusion": "success",
-          "url": "https://github.com/Xmaster6y/tensordict/actions/runs/23527812619/job/68484870990",
-          "display_name": "RL GPU Tests"
-        },
-        "lint.yml": {
-          "status": "success",
-          "conclusion": "success",
-          "url": "https://github.com/Xmaster6y/tensordict/actions/runs/23527812619/job/68484871008",
-          "display_name": "Lint"
-        },
-        "docs.yml": {
-          "status": "success",
-          "conclusion": "success",
-          "url": "https://github.com/Xmaster6y/tensordict/actions/runs/23527812619/job/68484871028",
-          "display_name": "Documentation"
-        },
-        "benchmarks.yml": {
-          "status": "success",
-          "conclusion": "success",
-          "url": "https://github.com/Xmaster6y/tensordict/actions/runs/23527812619/job/68484870962",
           "display_name": "Benchmarks"
         }
       },
